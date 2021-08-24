@@ -21,7 +21,7 @@ with open('notas.csv', 'r') as arquivo:
         for i in range(0, len(linha)):
             linha[i] = float(linha[i])
 
-        media = sum(linha)/3
+        media = sum(linha)/len(linha)
         media = ('{:.2f}'.format(media))
 
         if surfista in notas.keys():
