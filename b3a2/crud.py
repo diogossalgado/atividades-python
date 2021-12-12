@@ -47,7 +47,7 @@ def trocarsenha(useremail, novasenha):
 
 def deletarvga(useremail):
     userid = session.query(Usuario).filter_by(email=useremail).first()
-    session.delete(Usuario).filter(Usuario.id == userid.id).filter(Publicacao.id=="VGA")
+    session.delete(Usuario).filter(Usuario.id == userid.id).filter(Publicacao.local=="VGA")
     
 
     session.commit()
